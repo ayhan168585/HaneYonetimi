@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Core.Entities.Concrete;
 using Entities.Concrete;
 using Microsoft.EntityFrameworkCore;
 
@@ -24,6 +25,9 @@ namespace DataAccess.Concrete.EntityFramework
         public DbSet<Income> Incomes { get; set; }
         public DbSet<Unit> Units { get; set; }
         public DbSet<MarketItemPhoto> MarketItemPhotos { get; set; }
+        public DbSet<OperationClaim> OperationClaims { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<UserOperationClaim> UserOperationClaims { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

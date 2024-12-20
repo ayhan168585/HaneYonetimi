@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Core.Entities.Concrete;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -63,5 +64,12 @@ namespace Business.Constants
         public static string MarketItemExpensesListed="Harcamaların ayrıntıları listelendi";
         public static string UserPhotoAdded="Kullanıcı fotoğrafı eklendi";
         public static string TopExpenseMonthOfYearListed="Yılın en fazla harcama yapılan ayı listelendi";
+        internal static string? AuthorizationDenied;
+        internal static string UserRegistered;
+        internal static User UserNotFound;
+        internal static User PasswordError;
+        internal static string SuccessfulLogin;
+        internal static string UserAlreadyExists;
+        internal static string AccessTokenCreated;
     }
 }
