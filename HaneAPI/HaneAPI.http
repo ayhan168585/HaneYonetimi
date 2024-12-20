@@ -1,0 +1,6 @@
+@HaneAPI_HostAddress = http://localhost:5288
+
+GET {{HaneAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
