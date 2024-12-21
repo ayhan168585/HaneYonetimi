@@ -32,10 +32,10 @@ namespace Business.DependencyResolvers.Autofac
             builder.RegisterType<EfFamilyPersonDal>().As<IFamilyPersonDal>().SingleInstance();
             builder.RegisterType<EfUnitDal>().As<IUnitDal>().SingleInstance();
             builder.RegisterType<UnitManager>().As<IUnitService>().SingleInstance();
-            builder.RegisterType<UserManager>().As<IUserService>();
-            builder.RegisterType<EfUserDal>().As<IUserDal>();
-            builder.RegisterType<AuthManager>().As<IAuthService>();
-            builder.RegisterType<JwtHelper>().As<ITokenHelper>();
+            builder.RegisterType<UserManager>().As<IUserService>().SingleInstance();
+            builder.RegisterType<EfUserDal>().As<IUserDal>().SingleInstance();
+            builder.RegisterType<AuthManager>().As<IAuthService>().SingleInstance();
+            builder.RegisterType<JwtHelper>().As<ITokenHelper>().SingleInstance();
 
             var assembly = System.Reflection.Assembly.GetExecutingAssembly();
 

@@ -64,12 +64,12 @@ namespace Business.Constants
         public static string MarketItemExpensesListed="Harcamaların ayrıntıları listelendi";
         public static string UserPhotoAdded="Kullanıcı fotoğrafı eklendi";
         public static string TopExpenseMonthOfYearListed="Yılın en fazla harcama yapılan ayı listelendi";
-        internal static string? AuthorizationDenied;
-        internal static string UserRegistered;
-        internal static User UserNotFound;
-        internal static User PasswordError;
-        internal static string SuccessfulLogin;
-        internal static string UserAlreadyExists;
-        internal static string AccessTokenCreated;
+        public static string AuthorizationDenied="Bu işlem için yetkiniz yok";
+        public static string UserRegistered="Kullanıcı kayıt edildi";
+        public static string UserNotFound="Kullanıcı bulunamadı";
+        public static string PasswordError="Şifreniz hatalı";
+        public static string SuccessfulLogin="Giriş başarılı";
+        public static string UserAlreadyExists="Bu kullanıcı zaten mevcut";
+        public static string AccessTokenCreated="Token oluşturuldu";
     }
 }

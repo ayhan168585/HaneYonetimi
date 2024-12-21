@@ -1,4 +1,5 @@
 ﻿using Business.Abstract;
+using Business.BusinessAspects.Autofac;
 using Business.Constants;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
@@ -22,13 +23,13 @@ namespace Business.Concrete
         {
             _familyPersonDal = familyPersonDal;
         }
-
+        [SecuredOperation("user.add,Admin")]
         public IResult Add(FamilyPerson user)
         {
             _familyPersonDal.Add(user);
             return new SuccessResult(Messages.UserAdded);
         }
-
+        [SecuredOperation("userCreateDto.add,Admin")]
         public IResult AddFamilyPerson(FamilyPersonCreateDto userCreateDto)
         {
             _familyPersonDal.AddFamilyPerson(userCreateDto);
