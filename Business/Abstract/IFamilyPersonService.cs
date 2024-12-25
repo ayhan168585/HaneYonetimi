@@ -27,6 +27,7 @@ namespace Business.Abstract
         IResult DeleteFamilyPerson(int userId);
         IDataResult<object> FamilyPersonWiseFinancials();
         IDataResult<object> AverageFamilyPersonExpense();
+        IResult TransactionalOperation(FamilyPerson familyPerson);
 
 
 

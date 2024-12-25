@@ -210,6 +210,17 @@ namespace HaneAPI.Controllers
                 return File(fileStream, "image/jpeg");
             }
         }
+        [HttpPost("transaction")]
+        public IActionResult TransactionTest(FamilyPerson familyPerson)
+        {
+            var result = _familyPersonService.TransactionalOperation(familyPerson);
+            if (result.IsSuccess)
+            {
+                return Ok(result.Message);
+            }
+
+            return BadRequest(result.Message);
+        }
 
 
 
