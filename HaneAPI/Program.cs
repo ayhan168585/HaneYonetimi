@@ -12,6 +12,7 @@ using Microsoft.IdentityModel.Tokens;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddCors();
 
 builder.Services.AddControllers();
 builder.Services.AddDependencyResolvers(new ICoreModule[]
@@ -64,6 +65,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseCors(builder=>builder.WithOrigins("http://localhost:4200","https://localhost:4200").AllowAnyHeader());
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
